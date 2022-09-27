@@ -1,0 +1,9 @@
+package com.hsbc.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.hsbc.entity.Student;
+
+public interface studentRepository extends JpaRepository<Student,Long>{
+
+}

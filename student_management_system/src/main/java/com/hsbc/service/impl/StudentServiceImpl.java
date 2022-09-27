@@ -1,0 +1,33 @@
+package com.hsbc.service.impl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.hsbc.entity.Student;
+import com.hsbc.repository.studentRepository;
+import com.hsbc.service.studentService;
+
+@Service
+public class StudentServiceImpl implements studentService{
+
+	private studentRepository student_Repository;
+	
+	
+	public StudentServiceImpl(studentRepository student_Repository) {
+		super();
+		this.student_Repository = student_Repository;
+	}
+
+
+	@Override
+	public com.hsbc.service.List<com.hsbc.service.Student> getAllStudents() {
+		// TODO Auto-generated method stub
+		return student_Repository.findAll();
+	}
+
+
+	
+	
+
+}
